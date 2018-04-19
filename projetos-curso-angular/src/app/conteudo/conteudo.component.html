@@ -1,26 +1,101 @@
 <div class="container">
-  <div class="row" *ngIf="mostrarConteudo; else conteudoUnico">
-      <div class="col-md-6" *ngFor="let conteudo of conteudos">
 <div class="jumbotron">
-  <h1 class="display-4">Hello, world!</h1>
-  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-  <hr class="my-4">
-  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-  <button (click)="esconderConteudo()" type="button" class="btn btn-dark" >Veja mais</button>
-</div>
+        <div class="row">
+                <div class="col-md-6" > 
+        <img src="../../assets/angular-768x403.jpg" width="950" height="500" class="d-inline-block align-top" alt="">
+                 
+        <h1 class="display-4">Apredizado do Angular!</h1>        
+        <a class="btn btn-primary btn-lg" href="#" role="button">Clique aqui e aprenda mais!</a>
       </div>
-  </div>
+        </div>
 </div>
+
+ <h2> Outros conteudos </h2> 
+
+
+    <div class="row" *ngIf="mostrarConteudo; else conteudoUnico">
+        <div class="col-md-6" *ngFor="let conteudo of conteudos">
+            <div class="jumbotron">
+                <h1 class="display-4">O que é Angular CLI?</h1>
+                <p class="lead">O Angular CLI é uma ferramenta open source desenvolvida pelo próprio time do Angular e é utilizado para facilitar
+                    a criação de componentes, classes, services e outros. </p>
+                <hr class="my-4">
+                <p>Pre-requisitos: Para você conseguir executar os comandos, você vai precisar do Node 6.9.0 ou superior e o
+                    NPM 3 ou superior.</p>
+                <a href="http://www.google.com" target="_blank">Saber mais </a>
+                <button (click)="esconderConteudo()" type="button" class="btn btn-dark">Ver conteudo</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row" *ngIf="mostrarConteudo; else conteudoUnico1">
+        <div class="col-md-4" *ngFor="let conteudo of conteudos1">
+            <div class="jumbotron">
+                <h1 class="display-4">O que é Angular CLI?</h1>
+                <p class="lead">O Angular CLI é uma ferramenta open source desenvolvida pelo próprio time do Angular e é utilizado para facilitar
+                    a criação de componentes, classes, services e outros. </p>
+                <hr class="my-4">
+                <p>Pre-requisitos: Para você conseguir executar os comandos, você vai precisar do Node 6.9.0 ou superior e o
+                    NPM 3 ou superior.</p>
+                <a href="http://www.google.com" target="_blank">Saber mais </a>
+                <button (click)="esconderConteudo()" type="button" class="btn btn-dark">Ver conteudo</button>
+                </div>
+                </div>
+    </div>    
+</div>
+
+
+
 <ng-template #conteudoUnico>
-  <div class="col-md-12">
-      <div class="jumbotron">
-          <h1 class="display-4">Hello, world!</h1>
-          <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content
-              or information.</p>
-          <hr class="my-4">
-          <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-          <button (click)="mostrarConteudo1()" type="button" class="btn btn-dark">Voltar</button>
-      </div>
-  </div>
-  
+    <div class="col-md-12">
+        <div class="jumbotron">
+            <h1 class="display-4">ANGULAR</h1>
+            <p class="lead">Conhecendo o Angular CLI A partir da versão 2, o framework JavaScript Angular vem com uma interface de linha
+                de comando (command line interface) para facilitar e acelerar a criação de nossas aplicações, conhecida como
+                Angular CLI. Quando a versão 1.0 final do CLI foi lançada, ele se tornou a forma oficial para iniciar um
+                novo projeto em Angular. O Angular CLI é baseado no Webpack, uma ferramenta que ajuda a processar e agrupar
+                nossos diversos arquivos TypeScript, JavaScript, CSS, HTML e imagens. Por baixo dos panos, o Webpack é responsável
+                por estruturar o ponto de entrada da aplicação, ou seja, a raiz contextual (arquivo de inicialização).
+            </p>
+            <hr class="my-4">
+            <p> PS: O Angular CLI não é obrigatório para desenvolvermos com Angular, porém é uma ferramenta produtiva que automatiza
+                a criação de arquivos com código estrutural base que repetimos diversas vezes durante o desenvolvimento,
+                como por exemplo, a criação de components.</p>
+            <button (click)="mostrarConteudo1()" type="button" class="btn btn-dark">Voltar</button>
+        </div>
+    </div>
+</ng-template>
+
+    <ng-template #conteudoUnico1>
+            <div class="col-md-12">
+                <div class="jumbotron">
+                    <h1 class="display-4">ANGULAR</h1>
+                    <p class="lead">CLI – Command Line Interface
+                            No mundo dos frameworks, independente da linguagem, com alguma frequência encontramos ferramentas que nos 
+                            auxiliam com o dia a dia no desenvolvimento de software, principalmente quando existem tarefas repetitivas 
+                            e trabalhosas.
+                           Estas ferramentas geralmente são outros softwares, que podem variar de formato, podendo ser: bibliotecas 
+                           ou plugins adicionados ao projeto, um “programa” com interface gráfica, ou um programa de linha de comando, 
+                           que é o caso da Angular CLI.                            
+                            A CLI do Angular, foi lançada em março de 2017, com a intenção melhorar a experiência da pessoa 
+                            desenvolvedora de uma maneira geral, facilitando infinitamente o primeiro contato com o framework desde 
+                            a criação de um novo projeto, com toda a estrutura base montada e funcionando, assim como a criação de
+                             componentes, e com o momento do (não mais) trabalhoso build da aplicação.
+                            
+                            Iniciando com a CLI
+                            O pré-requisito é ter o NodeJS instalado numa versão atual (que já vem com o npm – que também é necessário).                           
+                            Com isto, basta instalar a CLI globalmente em seu computador com o comando npm install -g @angular/cli.
+                            
+                            O comando ng
+                            Após instalar a CLI em seu computador, você poderá executar o comando ng no seu terminal.                            
+                            Por exemplo, podemos testa-lo consultando sua versão desta maneira: ng -v.
+                    <hr class="my-4">
+                    <p> O comando ng
+                            Após instalar a CLI em seu computador, você poderá executar o comando ng no seu terminal.                            
+                            Por exemplo, podemos testa-lo consultando sua versão desta maneira: ng -v.</p>
+                    <button (click)="mostrarConteudo1()" type="button" class="btn btn-dark">Voltar</button>
+                </div>
+            </div>
 </ng-template>

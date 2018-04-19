@@ -10,6 +10,12 @@ conteudos : string[] = [
   "conteudo1",
   "conteudo2"
 ] ;
+
+conteudos1 : string[] = [
+  "cont1",
+  "cont2",
+  "cont3"  
+];
   constructor() { }
 
   mostrarConteudo : boolean = true;
